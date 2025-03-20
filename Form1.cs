@@ -103,6 +103,14 @@ namespace CRUDsederhana
         private void BtnDelete(object sender, EventArgs e)
         {
             using (SqlConnection conn = new SqlConnection(connectionString))
+            {
+                try
+                {
+
+                }catch (Exception ex)
+                {
+                    MessageBox.Show("Error : " + ex.Message );
+                }
         }
     }
 }
