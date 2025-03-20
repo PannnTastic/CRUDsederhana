@@ -124,6 +124,8 @@ namespace CRUDsederhana
                                 if (rowsAffected > 0)
                                 {
                                     MessageBox.Show("Data berhasil dihapus", "Success" , MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    LoadData();
+
                                 }
                             }
                           }
