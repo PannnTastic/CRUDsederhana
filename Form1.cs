@@ -108,7 +108,7 @@ namespace CRUDsederhana
                 {
                     if (dgvmahasiswa.SelectedRows.Count > 0)
                     {
-
+                        DialogResult dialogResult = MessageBox.Show("Apakah anda yakin ingin menghapus data ini?", "Konfirmasi", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
                     }
                 }
                 catch (Exception ex)
