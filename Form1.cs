@@ -160,6 +160,7 @@ namespace CRUDsederhana
                 txtNama.Text = row.Cells["Nama"].Value.ToString();
                 txtEmail.Text = row.Cells["Email"].Value.ToString();
                 txtTelepon.Text = row.Cells["Telepon"].Value.ToString();
+                txtAlamat.Text = row.Cells["Alamat"].Value.ToString();
             }
         }
     }
