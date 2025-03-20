@@ -36,21 +36,25 @@ namespace CRUDsederhana
         }
         private void LoadData()
         {
-            using (SqlConnection conn = new SqlConnection(connectionString)) 
+            try
             {
-                conn.Open();
-                string query = "SELECT NIM as [NIM], Nama, Email, Telepon, Alamat from Mahasiswa";
-                SqlDataAdapter da = new SqlDataAdapter(query, conn);
-                DataTable dt = new DataTable();
-                da.Fill(dt);
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                {
+                    conn.Open();
+                    string query = "SELECT NIM as [NIM], Nama, Email, Telepon, Alamat from Mahasiswa";
+                    SqlDataAdapter da = new SqlDataAdapter(query, conn);
+                    DataTable dt = new DataTable();
+                    da.Fill(dt);
 
-                dgvmahasiswa.AutoGenerateColumns = true;
-                dgvmahasiswa.DataSource = dt;
+                    dgvmahasiswa.AutoGenerateColumns = true;
+                    dgvmahasiswa.DataSource = dt;
 
-                ClearForm();
-
+                    ClearForm();
+                }
+            }catch (Exception ex)
+            {
+                
             }
-        }
 
     }
 }
