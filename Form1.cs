@@ -59,7 +59,7 @@ namespace CRUDsederhana
            
         }
 
-        private void btnCreate(object sender, EventArgs e)
+        private void BtnCreate(object sender, EventArgs e)
         {
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
@@ -69,6 +69,8 @@ namespace CRUDsederhana
                     {
                         MessageBox.Show("NIM, Nama, dan Telepon harus diisi", "Warning");
                     }
+
+                    conn.Open();
                 }
                 catch (Exception ex)
                 {
