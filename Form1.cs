@@ -149,6 +149,7 @@ namespace CRUDsederhana
         private void BtnRead(object sender, EventArgs e)
         {
             LoadData();
+            MessageBox.Show($"Jumlah Kolom : {dgvmahasiswa.ColumnCount}\nJumlah Baris : {dgvmahasiswa.RowCount}", "Debugging Data Grid View", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }
