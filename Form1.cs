@@ -157,6 +157,7 @@ namespace CRUDsederhana
             {
                 DataGridViewRow row = dgvmahasiswa.Rows[e.RowIndex];
                 txtNIM.Text = row.Cells["NIM"].Value.ToString();
+                txtNama.Text = row.Cells["Nama"].Value.ToString();
             }
         }
     }
