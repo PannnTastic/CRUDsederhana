@@ -29,6 +29,7 @@ namespace CRUDsederhana
             txtNama.Clear();
             txtTelepon.Clear();
             txtAlamat.Clear();
+            txtEmail.Clear();
         }
 
     }
