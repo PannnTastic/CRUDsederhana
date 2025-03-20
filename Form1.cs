@@ -78,6 +78,7 @@ namespace CRUDsederhana
                         cmd.Parameters.AddWithValue("@Nama", txtNama.Text);
                         cmd.Parameters.AddWithValue("@Email", txtEmail.Text);
                         cmd.Parameters.AddWithValue("@Telepon", txtTelepon.Text);
+                        cmd.Parameters.AddWithValue("@Alamat", txtAlamat.Text);
                     }
                 }
                 catch (Exception ex)
