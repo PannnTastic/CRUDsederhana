@@ -153,7 +153,10 @@ namespace CRUDsederhana
         }
         private void dgvmahasiswa_CellClick(object sender , DataGridViewCellEventArgs e)
         {
+            if(e.RowIndex >= 0)
+            {
 
+            }
         }
     }
 }
