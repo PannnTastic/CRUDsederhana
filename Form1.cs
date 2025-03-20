@@ -27,6 +27,7 @@ namespace CRUDsederhana
         {
             txtNIM.Clear();
             txtNama.Clear();
+            txtTelepon.Clear();
         }
 
     }
