@@ -81,6 +81,10 @@ namespace CRUDsederhana
                         cmd.Parameters.AddWithValue("@Alamat", txtAlamat.Text);
 
                         int rowsAffected = cmd.ExecuteNonQuery();
+                        if (rowsAffected > 0)
+                        {
+
+                        }
                     }
                 }
                 catch (Exception ex)
