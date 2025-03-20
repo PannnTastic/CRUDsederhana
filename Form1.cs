@@ -87,6 +87,10 @@ namespace CRUDsederhana
                             LoadData();
                             ClearForm();
                         }
+                        else
+                        {
+                            MessageBox.Show("Data gagal ditambahkan", "Error");
+                        }
                     }
                 }
                 catch (Exception ex)
