@@ -148,7 +148,7 @@ namespace CRUDsederhana
 
         private void BtnRead(object sender, EventArgs e)
         {
-
+            LoadData();
         }
     }
 }
