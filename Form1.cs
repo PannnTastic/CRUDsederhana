@@ -130,7 +130,7 @@ namespace CRUDsederhana
                                     else
                                     {
                                         MessageBox.Show("Data gagal dihapus", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                                }
+                                    }
                                 }
                           }
                           catch (Exception ex)
@@ -138,6 +138,10 @@ namespace CRUDsederhana
                               MessageBox.Show("Error : " + ex.Message);
                           }
                      }          
+                }
+                else
+                {
+
                 }
             }         
         }
