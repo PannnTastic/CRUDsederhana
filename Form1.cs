@@ -99,5 +99,10 @@ namespace CRUDsederhana
                 }
             }
         }
+
+        private void BtnDelete(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
