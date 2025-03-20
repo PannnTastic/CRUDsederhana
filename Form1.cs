@@ -116,31 +116,30 @@ namespace CRUDsederhana
                             conn.Open();
                             string query = "DELETE FROM Mahasiswa WHERE NIM = @NIM";
 
-                            using (SqlCommand cmd = new SqlCommand(query, conn))
-                            {
-                                cmd.Parameters.AddWithValue("@NIM", nim);
-                                int rowsAffected = cmd.ExecuteNonQuery();
-
-                                if (rowsAffected > 0)
+                                using (SqlCommand cmd = new SqlCommand(query, conn))
                                 {
-                                    MessageBox.Show("Data berhasil dihapus", "Success" , MessageBoxButtons.OK, MessageBoxIcon.Information);
-                                    LoadData();
-                                    ClearForm();
+                                    cmd.Parameters.AddWithValue("@NIM", nim);
+                                    int rowsAffected = cmd.ExecuteNonQuery();
+
+                                    if (rowsAffected > 0)
+                                    {
+                                        MessageBox.Show("Data berhasil dihapus", "Success" , MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                        LoadData();
+                                        ClearForm();
+                                    }
+                                    else
+                                    {
+
+                                    }
                                 }
-                            }
                           }
                           catch (Exception ex)
                           {
                               MessageBox.Show("Error : " + ex.Message);
                           }
-
-                     }
-                            
+                     }          
                 }
-            }
-                
-                
-            }
+            }         
         }
     }
 }
