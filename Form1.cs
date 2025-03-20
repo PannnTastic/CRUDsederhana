@@ -53,7 +53,7 @@ namespace CRUDsederhana
                 }
             }catch (Exception ex)
             {
-                
+                MessageBox.Show(ex.Message, "Error");
             }
 
     }
