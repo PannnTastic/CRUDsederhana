@@ -61,9 +61,16 @@ namespace CRUDsederhana
 
         private void btnCreate(object sender, EventArgs e)
         {
-            using SqlConnection conn = new SqlConnection(connectionString)
+            using (SqlConnection conn = new SqlConnection(connectionString))
             {
+                try
+                {
 
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Error");
+                }
             }
         }
     }
