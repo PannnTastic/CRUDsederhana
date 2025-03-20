@@ -75,6 +75,7 @@ namespace CRUDsederhana
                     using (SqlCommand cmd = new SqlCommand(query, conn))
                     {
                         cmd.Parameters.AddWithValue("@NIM", txtNIM.Text);
+                        cmd.Parameters.AddWithValue("@Nama", txtNama.Text);
                     }
                 }
                 catch (Exception ex)
