@@ -125,7 +125,7 @@ namespace CRUDsederhana
                                 {
                                     MessageBox.Show("Data berhasil dihapus", "Success" , MessageBoxButtons.OK, MessageBoxIcon.Information);
                                     LoadData();
-
+                                    ClearForm();
                                 }
                             }
                           }
