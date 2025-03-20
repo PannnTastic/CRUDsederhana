@@ -30,6 +30,8 @@ namespace CRUDsederhana
             txtTelepon.Clear();
             txtAlamat.Clear();
             txtEmail.Clear();
+
+            txtNIM.Focus();
         }
 
     }
