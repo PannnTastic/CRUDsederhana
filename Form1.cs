@@ -112,11 +112,11 @@ namespace CRUDsederhana
                      {
                           try
                           {
-
+                            conn.Open();
                           }
                           catch (Exception ex)
                           {
-                                    MessageBox.Show("Error : " + ex.Message);
+                              MessageBox.Show("Error : " + ex.Message);
                           }
 
                      }
