@@ -53,7 +53,7 @@ namespace CRUDsederhana
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message, "Error");
+                    MessageBox.Show("Error : " + ex.Message );
                 }
             }
            
@@ -67,7 +67,7 @@ namespace CRUDsederhana
                 {
                     if(txtNIM.Text == "" || txtNama.Text == "" || txtTelepon.Text == "")
                     {
-                        MessageBox.Show("NIM, Nama, dan Telepon harus diisi", "Warning");
+                        MessageBox.Show("NIM, Nama, dan Telepon harus diisi", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
 
                     conn.Open();
@@ -89,13 +89,13 @@ namespace CRUDsederhana
                         }
                         else
                         {
-                            MessageBox.Show("Data gagal ditambahkan", "Error");
+                            MessageBox.Show("Data gagal ditambahkan", "Error" ,MessageBoxButtons.OK , MessageBoxIcon.Error);
                         }
                     }
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message, "Error");
+                    MessageBox.Show("Error : " + ex.Message);
                 }
             }
         }
