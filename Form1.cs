@@ -12,6 +12,7 @@ namespace CRUDsederhana
 {
     public partial class Form1: Form 
     {
+        private string connectionString = "Data Source=LAPTOP-EKC9LDBK\\PANNNTASTIC;Initial Catalog=OrganisasiMahasiswa;Integrated Security=True";
         public Form1()
         {
             InitializeComponent();
