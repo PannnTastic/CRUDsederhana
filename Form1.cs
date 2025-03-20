@@ -39,6 +39,7 @@ namespace CRUDsederhana
             using (SqlConnection conn = new SqlConnection(connectionString)) 
             {
                 conn.Open();
+                string query = "SELECT NIM as [NIM], Nama, Email, Telepon, Alamat from Mahasiswa";
             }
         }
 
