@@ -114,7 +114,8 @@ namespace CRUDsederhana
                           {
                             string nim = dgvmahasiswa.SelectedRows[0].Cells["NIM"].Value.ToString();
                             conn.Open();
-                          }
+                            string query = "DELETE FROM Mahasiswa WHERE NIM = @NIM";
+                        }
                           catch (Exception ex)
                           {
                               MessageBox.Show("Error : " + ex.Message);
