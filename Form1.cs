@@ -23,5 +23,10 @@ namespace CRUDsederhana
             LoadData(); 
         }
 
+        private void ClearForm() 
+        {
+            
+        }
+
     }
 }
