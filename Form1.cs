@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -35,7 +36,10 @@ namespace CRUDsederhana
         }
         private void LoadData()
         {
+            using (SqlConnection conn = new SqlConnection(connectionString)) 
+            {
 
+            }
         }
 
     }
