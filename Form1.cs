@@ -33,6 +33,10 @@ namespace CRUDsederhana
 
             txtNIM.Focus();
         }
+        private void LoadData()
+        {
+
+        }
 
     }
 }
