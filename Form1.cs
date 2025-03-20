@@ -61,7 +61,10 @@ namespace CRUDsederhana
 
         private void btnCreate(object sender, EventArgs e)
         {
+            using SqlConnection conn = new SqlConnection(connectionString)
+            {
 
+            }
         }
     }
 }
