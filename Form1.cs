@@ -139,11 +139,11 @@ namespace CRUDsederhana
                           }
                      }          
                 }
-                else
-                {
-                    MessageBox.Show("Pilih data yang akan dihapus", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
-            }         
+            }
+            else
+            {
+                MessageBox.Show("Pilih data yang akan dihapus", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
     }
 }
