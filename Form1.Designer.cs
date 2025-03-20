@@ -67,6 +67,7 @@
             this.dgvmahasiswa.RowTemplate.Height = 24;
             this.dgvmahasiswa.Size = new System.Drawing.Size(554, 150);
             this.dgvmahasiswa.TabIndex = 14;
+            this.dgvmahasiswa.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvmahasiswa_CellClick);
             // 
             // btnDelete
             // 
@@ -76,6 +77,7 @@
             this.btnDelete.TabIndex = 13;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.BtnDelete);
             // 
             // btnUpdate
             // 
@@ -85,6 +87,7 @@
             this.btnUpdate.TabIndex = 12;
             this.btnUpdate.Text = "Update ";
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.BtnUpdate);
             // 
             // btnRead
             // 
@@ -94,6 +97,7 @@
             this.btnRead.TabIndex = 11;
             this.btnRead.Text = "Refresh";
             this.btnRead.UseVisualStyleBackColor = true;
+            this.btnRead.Click += new System.EventHandler(this.BtnRead);
             // 
             // btnCreate
             // 
@@ -103,6 +107,7 @@
             this.btnCreate.TabIndex = 10;
             this.btnCreate.Text = "Create";
             this.btnCreate.UseVisualStyleBackColor = true;
+            this.btnCreate.Click += new System.EventHandler(this.BtnCreate);
             // 
             // txtNama
             // 

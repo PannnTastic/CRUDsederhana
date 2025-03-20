@@ -156,11 +156,54 @@ namespace CRUDsederhana
             if(e.RowIndex >= 0)
             {
                 DataGridViewRow row = dgvmahasiswa.Rows[e.RowIndex];
-                txtNIM.Text = row.Cells["0"].Value.ToString();
-                txtNama.Text = row.Cells["1"].Value.ToString();
-                txtEmail.Text = row.Cells["2"].Value.ToString();
-                txtTelepon.Text = row.Cells["3"].Value.ToString();
-                txtAlamat.Text = row.Cells["4"].Value.ToString();
+                txtNIM.Text = row.Cells["NIM"].Value.ToString();
+                txtNama.Text = row.Cells["Nama"].Value.ToString();
+                txtEmail.Text = row.Cells["Email"].Value.ToString();
+                txtTelepon.Text = row.Cells["Telepon"].Value.ToString();
+                txtAlamat.Text = row.Cells["Alamat"].Value.ToString();
+            }
+        }
+
+        private void BtnUpdate(object sender, EventArgs e)
+        {
+            if (dgvmahasiswa.SelectedRows.Count > 0)
+            {
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                {
+                    try
+                    {
+                        string nim = dgvmahasiswa.SelectedRows[0].Cells["NIM"].Value.ToString();
+                        conn.Open();
+                        string query = "UPDATE Mahasiswa SET Nama = @Nama, Email = @Email, Telepon = @Telepon, Alamat = @Alamat WHERE NIM = @NIM";
+                        using (SqlCommand cmd = new SqlCommand(query, conn))
+                        {
+                            cmd.Parameters.AddWithValue("@NIM", txtNIM.Text);
+                            cmd.Parameters.AddWithValue("@Nama", txtNama.Text);
+                            cmd.Parameters.AddWithValue("@Email", txtEmail.Text);
+                            cmd.Parameters.AddWithValue("@Telepon", txtTelepon.Text);
+                            cmd.Parameters.AddWithValue("@Alamat", txtAlamat.Text);
+                            int rowsAffected = cmd.ExecuteNonQuery();
+                            if (rowsAffected > 0)
+                            {
+                                MessageBox.Show("Data berhasil diupdate", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                LoadData();
+                                ClearForm();
+                            }
+                            else
+                            {
+                                MessageBox.Show("Data gagal diupdate", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error : " + ex.Message);
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Pilih data yang akan diupdate", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
     }
