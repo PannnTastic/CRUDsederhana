@@ -65,7 +65,10 @@ namespace CRUDsederhana
             {
                 try
                 {
+                    if(txtNIM.Text == "" || txtNama.Text == "" || txtTelepon.Text == "")
+                    {
 
+                    }
                 }
                 catch (Exception ex)
                 {
