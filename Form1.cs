@@ -151,5 +151,9 @@ namespace CRUDsederhana
             LoadData();
             MessageBox.Show($"Jumlah Kolom : {dgvmahasiswa.ColumnCount}\nJumlah Baris : {dgvmahasiswa.RowCount}", "Debugging Data Grid View", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+        private void dgvmahasiswa_CellClick(object sender , DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
