@@ -106,11 +106,16 @@ namespace CRUDsederhana
             {
                 try
                 {
+                    if (dgvmahasiswa.SelectedRows.Count > 0)
+                    {
 
-                }catch (Exception ex)
-                {
-                    MessageBox.Show("Error : " + ex.Message );
+                    }
                 }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error : " + ex.Message);
+                }
+            }
         }
     }
 }
