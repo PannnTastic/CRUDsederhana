@@ -145,5 +145,10 @@ namespace CRUDsederhana
                 MessageBox.Show("Pilih data yang akan dihapus", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
+
+        private void BtnRead(object sender, EventArgs e)
+        {
+
+        }
     }
 }
