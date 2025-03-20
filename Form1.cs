@@ -112,6 +112,7 @@ namespace CRUDsederhana
                      {
                           try
                           {
+                            string nim = dgvmahasiswa.SelectedRows[0].Cells["NIM"].Value.ToString();
                             conn.Open();
                           }
                           catch (Exception ex)
