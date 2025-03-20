@@ -38,7 +38,7 @@ namespace CRUDsederhana
         {
             using (SqlConnection conn = new SqlConnection(connectionString)) 
             {
-
+                conn.Open();
             }
         }
 
