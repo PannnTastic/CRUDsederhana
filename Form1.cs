@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace CRUDsederhana
 {
-    public partial class Form1: Form 
+    public partial class Form1 : Form
     {
         private string connectionString = "Data Source=LAPTOP-EKC9LDBK\\PANNNTASTIC;Initial Catalog=OrganisasiMahasiswa;Integrated Security=True";
         public Form1()
@@ -21,10 +21,10 @@ namespace CRUDsederhana
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            LoadData(); 
+            LoadData();
         }
 
-        private void ClearForm() 
+        private void ClearForm()
         {
             txtNIM.Clear();
             txtNama.Clear();
@@ -51,10 +51,17 @@ namespace CRUDsederhana
 
                     ClearForm();
                 }
-            }catch (Exception ex)
+            }
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Error");
             }
 
+        }
+
+        private void btnCreate(object sender, EventArgs e)
+        {
+
+        }
     }
 }
