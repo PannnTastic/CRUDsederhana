@@ -44,7 +44,9 @@ namespace CRUDsederhana
                 DataTable dt = new DataTable();
                 da.Fill(dt);
 
+                dgvmahasiswa.AutoGenerateColumns = true;
                 dgvmahasiswa.DataSource = dt;
+
             }
         }
 
