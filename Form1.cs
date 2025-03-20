@@ -102,19 +102,29 @@ namespace CRUDsederhana
 
         private void BtnDelete(object sender, EventArgs e)
         {
-            using (SqlConnection conn = new SqlConnection(connectionString))
+               
+            if (dgvmahasiswa.SelectedRows.Count > 0)
             {
-                try
+                DialogResult dialogResult = MessageBox.Show("Apakah anda yakin ingin menghapus data ini?", "Konfirmasi", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (dialogResult == DialogResult.Yes)
                 {
-                    if (dgvmahasiswa.SelectedRows.Count > 0)
-                    {
-                        DialogResult dialogResult = MessageBox.Show("Apakah anda yakin ingin menghapus data ini?", "Konfirmasi", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-                    }
+                     using (SqlConnection conn = new SqlConnection(connectionString))
+                     {
+                          try
+                          {
+
+                          }
+                          catch (Exception ex)
+                          {
+                                    MessageBox.Show("Error : " + ex.Message);
+                          }
+
+                     }
+                            
                 }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error : " + ex.Message);
-                }
+            }
+                
+                
             }
         }
     }
