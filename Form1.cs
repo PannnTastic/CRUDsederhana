@@ -36,9 +36,9 @@ namespace CRUDsederhana
         }
         private void LoadData()
         {
-            try
+            using (SqlConnection conn = new SqlConnection(connectionString))
             {
-                using (SqlConnection conn = new SqlConnection(connectionString))
+                try
                 {
                     conn.Open();
                     string query = "SELECT NIM as [NIM], Nama, Email, Telepon, Alamat from Mahasiswa";
@@ -51,12 +51,12 @@ namespace CRUDsederhana
 
                     ClearForm();
                 }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Error");
+                }
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Error");
-            }
-
+           
         }
 
         private void btnCreate(object sender, EventArgs e)
