@@ -67,7 +67,7 @@ namespace CRUDsederhana
                 {
                     if(txtNIM.Text == "" || txtNama.Text == "" || txtTelepon.Text == "")
                     {
-
+                        MessageBox.Show("NIM, Nama, dan Telepon harus diisi", "Warning");
                     }
                 }
                 catch (Exception ex)
