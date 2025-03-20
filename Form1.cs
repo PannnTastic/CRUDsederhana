@@ -20,7 +20,7 @@ namespace CRUDsederhana
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            LoadData(); 
         }
 
         private void Form1_Click(object sender, EventArgs e)
