@@ -42,6 +42,7 @@ namespace CRUDsederhana
                 string query = "SELECT NIM as [NIM], Nama, Email, Telepon, Alamat from Mahasiswa";
                 SqlDataAdapter da = new SqlDataAdapter(query, conn);
                 DataTable dt = new DataTable();
+                da.Fill(dt);
             }
         }
 
