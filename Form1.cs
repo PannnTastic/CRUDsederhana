@@ -102,7 +102,7 @@ namespace CRUDsederhana
 
         private void BtnDelete(object sender, EventArgs e)
         {
-            
+            using (SqlConnection conn = new SqlConnection(connectionString))
         }
     }
 }
