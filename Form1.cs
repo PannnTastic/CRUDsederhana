@@ -120,6 +120,11 @@ namespace CRUDsederhana
                             {
                                 cmd.Parameters.AddWithValue("@NIM", nim);
                                 int rowsAffected = cmd.ExecuteNonQuery();
+
+                                if (rowsAffected > 0)
+                                {
+
+                                }
                             }
                           }
                           catch (Exception ex)
